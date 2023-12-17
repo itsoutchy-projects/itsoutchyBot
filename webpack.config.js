@@ -21,7 +21,8 @@ module.exports = {
         "os": require.resolve("os-browserify/browser"),
         "path": require.resolve("path-browserify"),
         "timers": require.resolve("timers-browserify"),
-        "process": require.resolve("process/browser")
+        "process": require.resolve("process/browser"),
+        "querystring": require.resolve("querystring-es3")
     }
   },
   plugins: [

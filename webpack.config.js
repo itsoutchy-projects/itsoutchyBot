@@ -6,15 +6,16 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
-//   resolve: {
-//     fallback: {
-//         "stream": false,
-//         "http": false,
-//         "assert": false,
-//         "buffer": false,
-//         "string_decoder": false
-//     }
-//   }
+  resolve: {
+    fallback: {
+        "buffer": require.resolve("buffer/"),
+        "http": require.resolve("stream-http"),
+        "stream": require.resolve("stream-browserify"),
+        "assert": require.resolve("assert/"),
+        "zlib": require.resolve("browserify-zlib"),
+        "util": require.resolve("util/")
+    }
+  }
 //   externals: {
 //     "node:path": "commonjs path",
 //     "node:worker_threads": "commonjs path",

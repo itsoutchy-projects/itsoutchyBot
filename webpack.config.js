@@ -16,7 +16,12 @@ module.exports = {
         "zlib": require.resolve("browserify-zlib"),
         "util": require.resolve("util/"),
         "url": require.resolve("url/"),
-        "console": require.resolve("console-browserify")
+        "console": require.resolve("console-browserify"),
+        "crypto": require.resolve("crypto-browserify"),
+        "os": require.resolve("os-browserify/browser"),
+        "path": require.resolve("path-browserify"),
+        "timers": require.resolve("timers-browserify"),
+        "process": require.resolve("process/browser")
     }
   },
   plugins: [

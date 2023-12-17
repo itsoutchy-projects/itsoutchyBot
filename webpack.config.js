@@ -6,15 +6,15 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  resolve: {
-    fallback: {
-        "stream": false,
-        "http": false,
-        "assert": false,
-        "buffer": false,
-        "string_decoder": false
-    }
-  }
+//   resolve: {
+//     fallback: {
+//         "stream": false,
+//         "http": false,
+//         "assert": false,
+//         "buffer": false,
+//         "string_decoder": false
+//     }
+//   }
 //   externals: {
 //     "node:path": "commonjs path",
 //     "node:worker_threads": "commonjs path",

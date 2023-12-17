@@ -15,7 +15,12 @@ module.exports = {
         "zlib": require.resolve("browserify-zlib"),
         "util": require.resolve("util/")
     }
-  }
+  },
+  plugins: [
+    new webpack.NormalModuleReplacementPlugin(/node:/, (resource) => {
+      resource.request = resource.request.replace(/^node:/, "");
+    }),
+  ]
 //   externals: {
 //     "node:path": "commonjs path",
 //     "node:worker_threads": "commonjs path",

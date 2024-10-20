@@ -1,5 +1,10 @@
 # Channels
 verification_dump = 1146407855033962556
+unverified = 1146418047440142356
+music_drops = 1297200586160078969
 
 # Roles
 verified = 1146413933448675418
+
+# Bots/members
+monitoRSS = 268478587651358721

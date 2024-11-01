@@ -1,6 +1,7 @@
 import config
 import discord
 import ids
+import embeds
 
 intents = discord.Intents.default()
 intents.members = True
@@ -38,4 +39,10 @@ async def on_message(msg : discord.Message):
         # music drops channel and MonitoRSS bot
         await msg.publish() # automatically publish notifs, saves me a job
 
+@client.event
+async def on_message_delete(msg : discord.Message):
+    # hehe you cant delete your messages to get away with doing something naughty >:)
+    message_logs = msg.guild.get_channel(ids.message_logs)
+    await message_logs.send(embed=embeds.message_delete(msg), silent=True)
+    
 client.run(config.TOKEN)

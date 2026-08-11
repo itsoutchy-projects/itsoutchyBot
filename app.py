@@ -33,6 +33,12 @@ async def on_member_join(member : discord.Member):
 async def on_message(msg : discord.Message):
     if msg.author == client.user:
         return
+    if msg.channel.id == ids.spam_bot_channel:
+        # spam bot + hacked user detection
+        # tysm clowfoe i genuinely wouldnt have thought of doing this
+        if not msg.author.id == ids.itsoutchy:
+            await msg.author.ban(delete_message_seconds=604800, reason="Automatically detected by itsoutchyBot to be either a spam bot or a hacked user")
+            return
     if client.user.mention in msg.content:
         await msg.reply("Beep boop! I'm keeping the server cool!") # its dead but idfc
     if msg.channel == client.get_channel(ids.verification_dump):
